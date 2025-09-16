@@ -4,59 +4,59 @@
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/WeixinCloud/wxcloudrun-express/express)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/WeixinCloud/wxcloudrun-express/sequelize)
 
-微信云托管 Node.js Express 框架模版，实现简单的计数器读写接口，使用云托管 MySQL 读写、记录计数值。
+å¾®ä¿¡äºæç®¡ Node.js Express æ¡æ¶æ¨¡çï¼å®ç°ç®åçè®¡æ°å¨è¯»åæ¥å£ï¼ä½¿ç¨äºæç®¡ MySQL è¯»åãè®°å½è®¡æ°å¼ã
 
 ![](https://qcloudimg.tencent-cloud.cn/raw/be22992d297d1b9a1a5365e606276781.png)
 
-## 快速开始
+## å¿«éå¼å§
 
-前往 [微信云托管快速开始页面](https://cloud.weixin.qq.com/cloudrun/onekey)，选择相应语言的模板，根据引导完成部署。
+åå¾ [å¾®ä¿¡äºæç®¡å¿«éå¼å§é¡µé¢](https://cloud.weixin.qq.com/cloudrun/onekey)ï¼éæ©ç¸åºè¯­è¨çæ¨¡æ¿ï¼æ ¹æ®å¼å¯¼å®æé¨ç½²ã
 
-## 本地调试
-下载代码在本地调试，请参考[微信云托管本地调试指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)
+## æ¬å°è°è¯
+ä¸è½½ä»£ç å¨æ¬å°è°è¯ï¼è¯·åè[å¾®ä¿¡äºæç®¡æ¬å°è°è¯æå](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)
 
-## 实时开发
-代码变动时，不需要重新构建和启动容器，即可查看变动后的效果。请参考[微信云托管实时开发指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/dev.html)
+## å®æ¶å¼å
+ä»£ç åå¨æ¶ï¼ä¸éè¦éæ°æå»ºåå¯å¨å®¹å¨ï¼å³å¯æ¥çåå¨åçææãè¯·åè[å¾®ä¿¡äºæç®¡å®æ¶å¼åæå](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/dev.html)
 
-## Dockerfile最佳实践
-请参考[如何提高项目构建效率](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/scene/build/speed.html)
+## Dockerfileæä½³å®è·µ
+è¯·åè[å¦ä½æé«é¡¹ç®æå»ºæç](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/scene/build/speed.html)
 
-## 项目结构说明
+## é¡¹ç®ç»æè¯´æ
 
 ```
 .
-├── Dockerfile
-├── README.md
-├── container.config.json
-├── db.js
-├── index.js
-├── index.html
-├── package.json
+âââ Dockerfile
+âââ README.md
+âââ container.config.json
+âââ db.js
+âââ index.js
+âââ index.html
+âââ package.json
 ```
 
-- `index.js`：项目入口，实现主要的读写 API
-- `db.js`：数据库相关实现，使用 `sequelize` 作为 ORM
-- `index.html`：首页代码
-- `package.json`：Node.js 项目定义文件
-- `container.config.json`：模板部署「服务设置」初始化配置（二开请忽略）
-- `Dockerfile`：容器配置文件
+- `index.js`ï¼é¡¹ç®å¥å£ï¼å®ç°ä¸»è¦çè¯»å API
+- `db.js`ï¼æ°æ®åºç¸å³å®ç°ï¼ä½¿ç¨ `sequelize` ä½ä¸º ORM
+- `index.html`ï¼é¦é¡µä»£ç 
+- `package.json`ï¼Node.js é¡¹ç®å®ä¹æä»¶
+- `container.config.json`ï¼æ¨¡æ¿é¨ç½²ãæå¡è®¾ç½®ãåå§åéç½®ï¼äºå¼è¯·å¿½ç¥ï¼
+- `Dockerfile`ï¼å®¹å¨éç½®æä»¶
 
-## 服务 API 文档
+## æå¡ API ææ¡£
 
 ### `GET /api/count`
 
-获取当前计数
+è·åå½åè®¡æ°
 
-#### 请求参数
+#### è¯·æ±åæ°
 
-无
+æ 
 
-#### 响应结果
+#### ååºç»æ
 
-- `code`：错误码
-- `data`：当前计数值
+- `code`ï¼éè¯¯ç 
+- `data`ï¼å½åè®¡æ°å¼
 
-##### 响应结果示例
+##### ååºç»æç¤ºä¾
 
 ```json
 {
@@ -65,23 +65,23 @@
 }
 ```
 
-#### 调用示例
+#### è°ç¨ç¤ºä¾
 
 ```
-curl https://<云托管服务域名>/api/count
+curl https://<äºæç®¡æå¡åå>/api/count
 ```
 
 ### `POST /api/count`
 
-更新计数，自增或者清零
+æ´æ°è®¡æ°ï¼èªå¢æèæ¸é¶
 
-#### 请求参数
+#### è¯·æ±åæ°
 
-- `action`：`string` 类型，枚举值
-  - 等于 `"inc"` 时，表示计数加一
-  - 等于 `"clear"` 时，表示计数重置（清零）
+- `action`ï¼`string` ç±»åï¼æä¸¾å¼
+  - ç­äº `"inc"` æ¶ï¼è¡¨ç¤ºè®¡æ°å ä¸
+  - ç­äº `"clear"` æ¶ï¼è¡¨ç¤ºè®¡æ°éç½®ï¼æ¸é¶ï¼
 
-##### 请求参数示例
+##### è¯·æ±åæ°ç¤ºä¾
 
 ```
 {
@@ -89,12 +89,12 @@ curl https://<云托管服务域名>/api/count
 }
 ```
 
-#### 响应结果
+#### ååºç»æ
 
-- `code`：错误码
-- `data`：当前计数值
+- `code`ï¼éè¯¯ç 
+- `data`ï¼å½åè®¡æ°å¼
 
-##### 响应结果示例
+##### ååºç»æç¤ºä¾
 
 ```json
 {
@@ -103,18 +103,18 @@ curl https://<云托管服务域名>/api/count
 }
 ```
 
-#### 调用示例
+#### è°ç¨ç¤ºä¾
 
 ```
-curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://<云托管服务域名>/api/count
+curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://<äºæç®¡æå¡åå>/api/count
 ```
 
-## 使用注意
-如果不是通过微信云托管控制台部署模板代码，而是自行复制/下载模板代码后，手动新建一个服务并部署，需要在「服务设置」中补全以下环境变量，才可正常使用，否则会引发无法连接数据库，进而导致部署失败。
+## ä½¿ç¨æ³¨æ
+å¦æä¸æ¯éè¿å¾®ä¿¡äºæç®¡æ§å¶å°é¨ç½²æ¨¡æ¿ä»£ç ï¼èæ¯èªè¡å¤å¶/ä¸è½½æ¨¡æ¿ä»£ç åï¼æå¨æ°å»ºä¸ä¸ªæå¡å¹¶é¨ç½²ï¼éè¦å¨ãæå¡è®¾ç½®ãä¸­è¡¥å¨ä»¥ä¸ç¯å¢åéï¼æå¯æ­£å¸¸ä½¿ç¨ï¼å¦åä¼å¼åæ æ³è¿æ¥æ°æ®åºï¼è¿èå¯¼è´é¨ç½²å¤±è´¥ã
 - MYSQL_ADDRESS
 - MYSQL_PASSWORD
 - MYSQL_USERNAME
-以上三个变量的值请按实际情况填写。如果使用云托管内MySQL，可以在控制台MySQL页面获取相关信息。
+ä»¥ä¸ä¸ä¸ªåéçå¼è¯·æå®éæåµå¡«åãå¦æä½¿ç¨äºæç®¡åMySQLï¼å¯ä»¥å¨æ§å¶å°MySQLé¡µé¢è·åç¸å³ä¿¡æ¯ã
 
 
 ## License

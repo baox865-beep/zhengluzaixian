@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="714448e0-7b1c-45f6-a8c2-4b2624762e00" name="User Data Source Mapping">
+      <data-sources db="167e75af-34e9-4626-ad07-a6937a9eaf96" ddl="2fd09ba5-3532-446e-b22b-56dc50fc3b5f" />
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="2fd09ba5-3532-446e-b22b-56dc50fc3b5f" />
+          <option name="name" value="User Data Source (DDL)" />
+          <option name="dbmsName" value="UNKNOWN" />
+          <option name="urls">
+            <array />
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
